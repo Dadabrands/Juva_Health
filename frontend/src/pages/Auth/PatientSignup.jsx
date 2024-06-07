@@ -261,7 +261,10 @@ const PatientSignup = () => {
           </p>
 
           <div className="flex items-center mb-4">
-            <Link to="/signup" className="text-primary flex font-inter items-center">
+            <Link
+              to="/signup"
+              className="text-primary flex font-inter items-center"
+            >
               <MdArrowBack size={24} className="mr-2" />
               Go Back
             </Link>
