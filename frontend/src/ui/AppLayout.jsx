@@ -1,25 +1,20 @@
 
-import Header from "./Header";
 import Main from "./Main";
 import Sidebar from "./Sidebar";
 
 function AppLayout() {
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <Sidebar />
-
-      {/* Main Content */}
-      <div className="flex flex-col flex-1">
-        {/* Header */}
-        <Header />
-
-        {/* Main */}
+    <div className="flex h-screen bg-white dark:bg-slate-900">
+      <section className="w-[15%] sm:w-[15%]">
+        <Sidebar />
+      </section>
+      <section className="flex flex-col w-[90%] sm:w-[85%] overflow-auto">
         <Main />
-      </div>
+      </section>
     </div>
+
+  
   );
 }
 
 export default AppLayout;
-

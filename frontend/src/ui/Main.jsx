@@ -2,9 +2,9 @@ import Container from "./Container";
 
 function Main() {
   return (
-    <main className="flex-1 bg-white">
-      <Container />
-    </main>
+    // <main className="flex-1 bg-white">
+    <Container />
+    // </main>
   );
 }
 
