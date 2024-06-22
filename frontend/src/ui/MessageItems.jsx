@@ -60,7 +60,7 @@ const RecentMessages = ({ messages }) => {
   );
 
   return (
-    <div className="max-w-[800px] mx-auto font-inter text-stone-500 pb-2 max-sm:px-2">
+    <div className="max-w-[700px] mx-auto font-inter text-stone-500 pb-2 max-sm:px-2">
       <div className="flex justify-between items-center gap-5 mt-14 max-md:mt-10 max-md:max-w-full">
         <h3 className="text-2xl font-bold text-black max-md:text-xl max-sm:text-lg">
           Recent messages

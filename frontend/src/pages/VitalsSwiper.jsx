@@ -114,7 +114,7 @@ function VitalsSwiper() {
     // dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.8,
+    slidesToShow: 3.4,
     // slidesToScroll: 1,
     responsive: [
       {
@@ -125,7 +125,7 @@ function VitalsSwiper() {
         },
       },
       {
-        breakpoint: 768, // When screen width is less than 768px
+        breakpoint: 768 && 720 && 690, // When screen width is less than 768px
         settings: {
           slidesToShow: 1.5,
           slidesToScroll: 1,
@@ -195,7 +195,7 @@ function VitalsSwiper() {
         Your health status
       </h3>
 
-      <div className="max-w-[800px] mx-auto font-inter text-stone-500">
+      <div className="max-w-[700px] mx-auto font-inter text-stone-500">
         <Slider {...settings}>
           {vitalsData.map((vital, index) => (
             <div key={index} className="px-2">
