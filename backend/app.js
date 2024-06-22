@@ -39,10 +39,10 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
 app.use(express.json({ limit: "10kb" }));
 
-//Data sanitization against noSQL injection using MongoDB Sanitizer middleware
+// Data sanitization against noSQL injection using MongoDB Sanitizer middleware
 app.use(mongoSanitize());
 
-//Data sanitization against xxs
+// Data sanitization against xxs
 app.use(xss());
 // cors
 app.use(cors());
@@ -56,7 +56,15 @@ app.use((req, res, next) => {
   next();
 });
 
-//routes
+// Root route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Welcome to the Juva Health API!",
+  });
+});
+
+// Routes
 app.use("/api/v1/vitals", vitalsRouter);
 app.use("/api/v1/patient", patientRouter);
 app.use("/api/v1/profiles", profileRouter);
@@ -65,6 +73,7 @@ app.use("/api/v1/messages", messageRouter);
 app.use("/api/v1/conversation", conversationRouter);
 app.use("/api/v1/file", imageUploadRouter);
 
+// Handle all other routes
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
